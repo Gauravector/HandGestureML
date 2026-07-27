@@ -5,3 +5,4 @@ models/*.pt
 *.avi
 __pycache__/
 .env
+/env
