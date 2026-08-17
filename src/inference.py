@@ -63,9 +63,9 @@ def resolve_handedness(raw_label):
 
 
 # --- Coordinate-mapping tuning (cursor) ---
-FRAME_REDUCTION_X = 100
-FRAME_REDUCTION_Y = 100
-SMOOTHING_ALPHA = 0.35
+FRAME_REDUCTION_X = 130
+FRAME_REDUCTION_Y = 130
+SMOOTHING_ALPHA = 0.5
 
 # --- Motion gesture tuning ---
 MOTION_HISTORY_LEN = 8          # frames of palm-position history to look at
@@ -279,9 +279,9 @@ def main():
         base_options=base_options,
         running_mode=mp_vision.RunningMode.IMAGE,
         num_hands=2,
-        min_hand_detection_confidence=0.6,
-        min_hand_presence_confidence=0.6,
-        min_tracking_confidence=0.6,
+        min_hand_detection_confidence=0.4,
+        min_hand_presence_confidence=0.4,
+        min_tracking_confidence=0.4,
     )
     landmarker = mp_vision.HandLandmarker.create_from_options(options)
 
